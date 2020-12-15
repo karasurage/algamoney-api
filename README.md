@@ -1,5 +1,3 @@
-# algamoney-api
-
 # Algamoney-API Algaworks
 
 ## Curso Fullstack Angular e Spring - Back-End
