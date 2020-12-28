@@ -3,6 +3,7 @@ package com.algaworks.algamoneyapi.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -19,6 +20,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * ResourceServerConfig tenha precedência sobre o configure(HttpSecurity http) do SecurityConfig.
  */
 
+@Profile("oauth-security")
 @Configuration
 @EnableWebSecurity
 @Order(4)
