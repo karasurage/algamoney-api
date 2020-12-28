@@ -2,6 +2,7 @@ package com.algaworks.algamoneyapi.service;
 
 import java.util.Optional;
 
+import com.algaworks.algamoneyapi.repository.projection.ResumoLancamento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -44,5 +45,9 @@ public class LancamentoService {
 
 	public void remover(Long codigo) {
 		lancamentoRepository.deleteById(codigo);
+	}
+
+	public Page<ResumoLancamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable) {
+		return lancamentoRepository.resumir(lancamentoFilter, pageable);
 	}
 }
